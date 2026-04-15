@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         <div>
-          <h3 className="font-serif text-xl font-bold text-primary-foreground mb-4">🌿 GreenCaps Foundation</h3>
+          <h3 className="font-serif text-xl font-bold text-primary-foreground mb-4"> GreenCaps Foundation</h3>
           <p className="text-sm leading-relaxed">
             A youth-driven initiative dedicated to environmental restoration through community action.
           </p>
