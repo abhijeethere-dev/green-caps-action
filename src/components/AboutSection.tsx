@@ -37,7 +37,9 @@ const AboutSection = () => (
               <item.icon className="w-7 h-7 text-accent-foreground" />
             </div>
             <h3 className="font-serif text-xl font-semibold mb-3">{item.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+            {item.desc.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="text-muted-foreground leading-relaxed mb-2 last:mb-0">{paragraph}</p>
+            ))}
           </div>
         ))}
       </div>
