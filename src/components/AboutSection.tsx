@@ -3,8 +3,8 @@ import { Users, Leaf, Heart } from "lucide-react";
 const items = [
   {
     icon: Users,
-    title: "Who We Are",
-    desc: "A youth-driven environmental foundation working towards a cleaner and greener society.",
+    title: "WHO ARE WE?",
+    desc: "WE ARE GREEN CAPS, A GROUP OF PEOPLE WORKING TOW ARDS A MISSION TO CLEAN OUR CITY,\n\n EVEN THOUGH IT'S OUR DUTY TO CLEAN UP AFTER USING A PUBLIC SPACE MANY PEOPLE HAVE NO REGARD FOR CLEANLINESS.\n\n WE ARE HERE TO MAKE PEOPLE AW ARE OF THE IMPORTANCE OF KEEPING OUR SURROUNDINGS CLEAN AND HEALTHY . IN ORDER TO PROTECT OUR ENVIRONMENT.",
   },
   {
     icon: Leaf,
