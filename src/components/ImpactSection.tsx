@@ -8,10 +8,10 @@ const activities = [
 ];
 
 const stats = [
-  { icon: Users, value: "100+", label: "Volunteers" },
-  { icon: Calendar, value: "50+", label: "Drives Conducted" },
-  { icon: TreePine, value: "2000+", label: "Trees Planted" },
-  { icon: MapPin, value: "15+", label: "Locations Covered" },
+  { icon: Users, value: "200+", label: "Volunteers" },
+  { icon: Calendar, value: "250+", label: "Drives Conducted" },
+  { icon: TreePine, value: "700+", label: "Trees Planted" },
+  { icon: MapPin, value: "12+", label: "Locations Covered" },
 ];
 
 const ImpactSection = () => (
