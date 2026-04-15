@@ -8,13 +8,13 @@ const items = [
   },
   {
     icon: Leaf,
-    title: "What We Do",
-    desc: "River cleaning drives, lake cleanups, tree plantation campaigns, and environmental awareness initiatives.",
+    title: "WHAT DO WE DO AND WHY?",
+    desc: "We do not just talk, we take action. We go to the location and get our hands dirty to clean our surroundings.\n\nWhy wait? Why just talk?\nWho else will keep our home clean, if not us?\n\nSo we step into the field and act to solve an issue that has been affecting our ecosystem for a very long time.",
   },
   {
     icon: Heart,
-    title: "Why It Matters",
-    desc: "Pollution and environmental damage are growing rapidly — collective action today ensures a better tomorrow.",
+    title: "WHY WE NEED YOUR HELP?",
+    desc: "We need volunteers who can come and join us. Join a movement to protect our nature from garbage, trash, and waste. A movement to make people aware and responsible citizens who put their trash where it belongs — in a dustbin.\n\nWe need your hands, your ideas, and your presence to make it happen, to turn our dream into reality.",
   },
 ];
 
