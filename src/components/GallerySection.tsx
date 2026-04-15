@@ -8,12 +8,12 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 
 const images = [
-  { src: gallery1, alt: "Tree plantation drive" },
-  { src: gallery2, alt: "Lake cleaning volunteers" },
-  { src: gallery3, alt: "Awareness campaign rally" },
-  { src: gallery4, alt: "Clean river after restoration" },
-  { src: gallery5, alt: "Volunteer team after cleanup" },
-  { src: gallery6, alt: "Sapling being planted" },
+  { src: gallery1, alt: "Volunteers cleaning river bank" },
+  { src: gallery2, alt: "Team collecting waste near bridge" },
+  { src: gallery3, alt: "Lake cleanup crew with collected trash" },
+  { src: gallery4, alt: "Volunteers working by the lakeside" },
+  { src: gallery5, alt: "Removing debris from lake water" },
+  { src: gallery6, alt: "Lake shore cleanup drive in action" },
 ];
 
 const GallerySection = () => {
