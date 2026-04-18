@@ -90,26 +90,28 @@ const activities: Record<string, Activity> = {
     tagline: "Reviving lakes that sustain our cities.",
     icon: Droplets,
     intro:
-      "Urban lakes are disappearing under layers of trash and weeds. We work to clear them, restore their banks, and protect the wildlife that calls them home.",
-    sections: [
+      "Lakes are vital ecosystems that support biodiversity, recharge groundwater, and provide peace and livelihood to communities. At Greencaps, we actively work to restore and protect these water bodies through consistent cleanup efforts and public engagement.",
+    topics: [
       {
-        heading: "What we do",
-        body: "Teams remove floating waste, clear invasive weeds from shorelines, and document pollution sources so authorities can act on them.",
+        heading: "Lake Cleaning Drives",
+        body: "Our team regularly conducts cleaning drives to remove plastic waste, discarded materials, and other pollutants from lake surfaces and surrounding areas. By clearing this waste, we help restore the natural beauty of lakes and prevent long-term environmental damage.",
+        images: [{ src: gallery3, alt: "Volunteers conducting a lake cleaning drive" }],
       },
       {
-        heading: "Why it matters",
-        body: "Healthy lakes recharge groundwater, cool nearby neighbourhoods, and support birds and fish. A clean lake is a gift to the entire neighbourhood.",
+        heading: "Removing Waste & Debris",
+        body: "From single-use plastics to immersion waste and everyday garbage, lakes often bear the burden of human negligence. Our volunteers step in to remove this debris, ensuring a cleaner and safer environment for aquatic life and local communities.",
+        images: [{ src: gallery4, alt: "Debris being removed from the lakeside" }],
       },
       {
-        heading: "How you can help",
-        body: "Show up for a weekend drive, sponsor cleanup equipment, or help us map polluted lakes near you.",
+        heading: "Restoring Natural Balance",
+        body: "By cleaning lakes and reducing pollution, we contribute to improving water quality and supporting the ecosystem that depends on it. Every effort helps bring lakes closer to their natural, thriving state.",
+        images: [{ src: gallery6, alt: "Restored lake shore after a drive" }],
       },
     ],
-    images: [
-      { src: gallery3, alt: "Lake cleanup crew with collected trash" },
-      { src: gallery4, alt: "Volunteers working by the lakeside" },
-      { src: gallery6, alt: "Lake shore cleanup drive in action" },
-    ],
+    closing: {
+      heading: "Protecting our lakes",
+      body: "Every drive brings us a step closer to healthier ecosystems and thriving communities around our lakes.",
+    },
   },
   "tree-plantation": {
     title: "Tree Plantation",
