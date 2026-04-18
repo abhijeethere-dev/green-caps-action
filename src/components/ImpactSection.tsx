@@ -1,10 +1,11 @@
-import { Waves, TreePine, Megaphone, Droplets, Users, MapPin, Calendar } from "lucide-react";
+import { Waves, TreePine, Megaphone, Droplets, Users, MapPin, Calendar, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const activities = [
-  { icon: Waves, title: "River Cleaning Drives", desc: "Restoring rivers by removing waste and debris from waterways." },
-  { icon: Droplets, title: "Lake Cleaning Drives", desc: "Cleaning and revitalizing lakes to support local ecosystems." },
-  { icon: TreePine, title: "Tree Plantation", desc: "Planting native trees to restore green cover and fight climate change." },
-  { icon: Megaphone, title: "Awareness Campaigns", desc: "Educating communities about sustainability and environmental care." },
+  { icon: Waves, title: "River Cleaning Drives", desc: "Restoring rivers by removing waste and debris from waterways.", slug: "river-cleaning" },
+  { icon: Droplets, title: "Lake Cleaning Drives", desc: "Cleaning and revitalizing lakes to support local ecosystems.", slug: "lake-cleaning" },
+  { icon: TreePine, title: "Tree Plantation", desc: "Planting native trees to restore green cover and fight climate change.", slug: "tree-plantation" },
+  { icon: Megaphone, title: "Awareness Campaigns", desc: "Educating communities about sustainability and environmental care.", slug: "awareness-campaigns" },
 ];
 
 const stats = [
@@ -24,12 +25,18 @@ const ImpactSection = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
         {activities.map((a) => (
-          <div key={a.title} className="group rounded-xl border border-border p-6 hover:border-primary/30 hover:bg-accent/50 transition-all">
+          <div key={a.title} className="group flex flex-col rounded-xl border border-border p-6 hover:border-primary/30 hover:bg-accent/50 transition-all">
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
               <a.icon className="w-6 h-6 text-primary" />
             </div>
             <h3 className="font-serif text-lg font-semibold mb-2">{a.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">{a.desc}</p>
+            <Link
+              to={`/work/${a.slug}`}
+              className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 transition-all"
+            >
+              View more <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         ))}
       </div>
