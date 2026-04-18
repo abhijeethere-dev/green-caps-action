@@ -114,56 +114,60 @@ const activities: Record<string, Activity> = {
     },
   },
   "tree-plantation": {
-    title: "Tree Plantation",
+    title: "Tree Plantation Drives",
     tagline: "Planting today for a greener tomorrow.",
     icon: TreePine,
     intro:
-      "Trees cool our cities, clean our air, and shelter countless species. We plant native saplings and ensure they survive long after the camera leaves.",
-    sections: [
+      "Trees are the foundation of a healthy environment. They purify air, support wildlife, and combat climate change. At Greencaps, we don't just plant trees — we nurture them.",
+    topics: [
       {
-        heading: "What we do",
-        body: "We choose native species suited to local soil and climate, plant them at the right depth and spacing, and return for follow-up watering and care.",
+        heading: "Planting for the Future",
+        body: "Our plantation drives focus on planting native and sustainable species that are best suited to the local environment. Each sapling represents a long-term commitment to a greener tomorrow.",
+        images: [{ src: gallery2, alt: "Native saplings being planted" }],
       },
       {
-        heading: "Why it matters",
-        body: "Tree cover is shrinking everywhere, and replacing what we lose is one of the simplest, most effective climate actions available to us.",
+        heading: "Beyond Planting – Nurturing Growth",
+        body: "We believe planting is just the beginning. Our team ensures proper care, watering, and protection of saplings so they can grow into strong, life-giving trees.",
+        images: [{ src: gallery4, alt: "Volunteers caring for young saplings" }],
       },
       {
-        heading: "How you can help",
-        body: "Sponsor a sapling, host a plantation drive in your neighbourhood, or volunteer to water and protect young trees.",
+        heading: "Building Green Communities",
+        body: "Through our plantation drives, we encourage individuals and communities to take ownership of their environment, making tree care a shared responsibility.",
+        images: [{ src: gallery1, alt: "Community plantation drive group photo" }],
       },
     ],
-    images: [
-      { src: gallery2, alt: "Plantation drive in progress" },
-      { src: gallery4, alt: "Volunteers preparing the ground" },
-      { src: gallery1, alt: "Group photo after plantation" },
-    ],
+    closing: {
+      heading: "A greener tomorrow",
+      body: "Every sapling is a promise — to cleaner air, richer biodiversity, and stronger communities.",
+    },
   },
   "awareness-campaigns": {
     title: "Awareness Campaigns",
     tagline: "Changing minds, one conversation at a time.",
     icon: Megaphone,
     intro:
-      "Lasting change starts with awareness. Through schools, street campaigns, and digital outreach, we help people see the impact of everyday choices.",
-    sections: [
+      "Real change begins with awareness. At Greencaps, we work to shift mindsets and inspire responsible behavior towards the environment.",
+    topics: [
       {
-        heading: "What we do",
-        body: "We run workshops in schools and colleges, organise street plays, and create social media content on waste segregation, plastic reduction, and water conservation.",
+        heading: "Educating for Impact",
+        body: "We conduct awareness campaigns in public spaces, schools, and communities to educate people about waste management, pollution, and sustainable living.",
+        images: [{ src: gallery6, alt: "Awareness session with the community" }],
       },
       {
-        heading: "Why it matters",
-        body: "Cleanups treat the symptom; awareness treats the cause. When people stop littering and start segregating, the problem shrinks at the source.",
+        heading: "Promoting Civic Responsibility",
+        body: "Our message is simple — your waste is your responsibility. We encourage people to adopt habits that reduce littering and protect natural spaces.",
+        images: [{ src: gallery3, alt: "Volunteers engaging with the public" }],
       },
       {
-        heading: "How you can help",
-        body: "Share our content, host us at your school or workplace, or volunteer as a campaign speaker in your community.",
+        heading: "Creating a Movement",
+        body: "Through consistent efforts, we aim to build a community of aware and responsible citizens who actively contribute to a cleaner and greener world.",
+        images: [{ src: gallery5, alt: "Outreach activity in action" }],
       },
     ],
-    images: [
-      { src: gallery6, alt: "Awareness session with community" },
-      { src: gallery3, alt: "Volunteers engaging the public" },
-      { src: gallery5, alt: "Outreach activity in action" },
-    ],
+    closing: {
+      heading: "Be part of the change",
+      body: "Awareness today shapes the habits of tomorrow — and together, we can build a cleaner, greener world.",
+    },
   },
 };
 
