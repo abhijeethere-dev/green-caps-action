@@ -169,28 +169,35 @@ const openVolunteerForm = () => {
   window.open(VOLUNTEER_FORM_URL, "_blank", "noopener,noreferrer");
 };
 
-const FanPhotos = ({ images }: { images: { src: string; alt: string }[] }) => (
-  <div className="group relative w-full aspect-[4/5] sm:aspect-[4/3] [perspective:1000px]">
-    {/* Bottom card */}
-    <div className="absolute inset-0 rounded-2xl overflow-hidden bg-muted shadow-md transition-all duration-500 ease-out origin-bottom-left rotate-[-4deg] translate-y-2 group-hover:rotate-[-10deg] group-hover:-translate-x-6 group-hover:translate-y-6 group-hover:shadow-xl">
-      <img
-        src={images[1]?.src ?? images[0].src}
-        alt={images[1]?.alt ?? images[0].alt}
-        loading="lazy"
-        className="w-full h-full object-cover"
-      />
+const FanPhotos = ({ images }: { images: { src: string; alt: string }[] }) => {
+  const second = images[1] ?? images[0];
+  return (
+    <div className="group relative w-full aspect-[4/3] py-6">
+      {/* Bottom card — peeks out at rest, slides fully out on hover */}
+      <div
+        className="absolute top-4 left-4 right-12 bottom-12 rounded-2xl overflow-hidden bg-muted shadow-md transition-all duration-500 ease-out -rotate-[5deg] group-hover:-rotate-[8deg] group-hover:-translate-x-10 group-hover:translate-y-10 group-hover:shadow-xl"
+      >
+        <img
+          src={second.src}
+          alt={second.alt}
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Top card — slides the opposite way on hover to fully reveal both */}
+      <div
+        className="absolute top-0 left-12 right-0 bottom-4 rounded-2xl overflow-hidden bg-muted shadow-lg transition-all duration-500 ease-out rotate-[4deg] group-hover:rotate-[8deg] group-hover:translate-x-10 group-hover:-translate-y-6 group-hover:shadow-2xl"
+      >
+        <img
+          src={images[0].src}
+          alt={images[0].alt}
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+      </div>
     </div>
-    {/* Top card */}
-    <div className="absolute inset-0 rounded-2xl overflow-hidden bg-muted shadow-lg transition-all duration-500 ease-out origin-bottom-right rotate-[3deg] group-hover:rotate-[8deg] group-hover:translate-x-6 group-hover:-translate-y-2 group-hover:shadow-2xl">
-      <img
-        src={images[0].src}
-        alt={images[0].alt}
-        loading="lazy"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 const ActivityDetail = () => {
   const { slug } = useParams<{ slug: string }>();
