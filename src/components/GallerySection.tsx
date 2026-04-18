@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, X } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -49,6 +50,16 @@ const GallerySection = () => {
               </div>
             </button>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
+          >
+            View more from the last 5 years
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
 
