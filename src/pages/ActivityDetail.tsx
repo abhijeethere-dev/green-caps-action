@@ -170,23 +170,16 @@ const openVolunteerForm = () => {
 };
 
 const FanPhotos = ({ images }: { images: { src: string; alt: string }[] }) => {
-  const second = images[1] ?? images[0];
   return (
     <div className="group relative w-full aspect-[4/3] py-6">
-      {/* Bottom card — peeks out at rest, slides fully out on hover */}
+      {/* Soft shadow stand-in behind the photo */}
       <div
-        className="absolute top-4 left-4 right-12 bottom-12 rounded-2xl overflow-hidden bg-muted shadow-md transition-all duration-500 ease-out -rotate-[5deg] group-hover:-rotate-[8deg] group-hover:-translate-x-10 group-hover:translate-y-10 group-hover:shadow-xl"
-      >
-        <img
-          src={second.src}
-          alt={second.alt}
-          loading="lazy"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      {/* Top card — slides the opposite way on hover to fully reveal both */}
+        aria-hidden
+        className="absolute top-6 left-2 right-10 bottom-10 rounded-2xl bg-foreground/15 blur-xl transition-all duration-500 ease-out -rotate-[5deg] group-hover:-rotate-[9deg] group-hover:-translate-x-8 group-hover:translate-y-8 group-hover:blur-2xl group-hover:bg-foreground/25"
+      />
+      {/* Top photo */}
       <div
-        className="absolute top-0 left-12 right-0 bottom-4 rounded-2xl overflow-hidden bg-muted shadow-lg transition-all duration-500 ease-out rotate-[4deg] group-hover:rotate-[8deg] group-hover:translate-x-10 group-hover:-translate-y-6 group-hover:shadow-2xl"
+        className="absolute top-0 left-6 right-2 bottom-4 rounded-2xl overflow-hidden bg-muted shadow-lg transition-all duration-500 ease-out rotate-[3deg] group-hover:rotate-[7deg] group-hover:translate-x-6 group-hover:-translate-y-3 group-hover:shadow-2xl"
       >
         <img
           src={images[0].src}
