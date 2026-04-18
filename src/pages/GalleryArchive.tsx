@@ -82,19 +82,19 @@ const GalleryArchive = () => {
             {MONTHS.map((month, i) => (
               <div
                 key={month}
-                className="group relative overflow-hidden rounded-xl aspect-square bg-muted shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer"
+                className="group cursor-pointer"
               >
-                <img
-                  src={COVERS[i % COVERS.length]}
-                  alt={`${month} ${selectedYear}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/40 to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground p-3 text-center">
-                  <Calendar size={20} className="opacity-80 mb-2" />
-                  <span className="font-serif text-xl md:text-2xl font-semibold">{month}</span>
-                  <span className="text-xs opacity-80 mt-1">{selectedYear}</span>
+                <div className="relative overflow-hidden rounded-xl aspect-square bg-muted shadow-sm group-hover:shadow-lg transition-all group-hover:-translate-y-1">
+                  <img
+                    src={COVERS[i % COVERS.length]}
+                    alt={`${month} ${selectedYear}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-sm font-medium text-foreground">{month}</p>
+                  <p className="text-xs text-muted-foreground">{selectedYear}</p>
                 </div>
               </div>
             ))}
