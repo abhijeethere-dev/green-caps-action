@@ -8,7 +8,8 @@ import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 
-const YEARS = [2021, 2022, 2023, 2024, 2025];
+const YEARS = [2021, 2022, 2023, 2024, 2025, 2026];
+const MONTHS_BY_YEAR: Record<number, number> = { 2026: 5 };
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
@@ -79,7 +80,7 @@ const GalleryArchive = () => {
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {MONTHS.map((month, i) => (
+            {MONTHS.slice(0, MONTHS_BY_YEAR[selectedYear] ?? 12).map((month, i) => (
               <div
                 key={month}
                 className="group cursor-pointer"
