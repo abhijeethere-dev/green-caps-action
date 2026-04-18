@@ -13,13 +13,22 @@ import gallery6 from "@/assets/gallery-6.jpg";
 
 const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/1VqfPFzt5Zdl1Bw5ylF-XJXASoQvMVMxc4LCKzijFT3U/edit";
 
+type TopicBlock = {
+  heading: string;
+  body: string;
+  images: { src: string; alt: string }[];
+};
+
 type Activity = {
   title: string;
   tagline: string;
   icon: LucideIcon;
   intro: string;
-  sections: { heading: string; body: string }[];
-  images: { src: string; alt: string }[];
+  topics?: TopicBlock[];
+  closing?: { heading: string; body: string };
+  // legacy fallback
+  sections?: { heading: string; body: string }[];
+  images?: { src: string; alt: string }[];
 };
 
 const activities: Record<string, Activity> = {
@@ -29,25 +38,52 @@ const activities: Record<string, Activity> = {
     icon: Waves,
     intro:
       "Our rivers are lifelines — yet they are choked with plastic, sewage, and discarded waste. Through our river cleaning drives, volunteers wade in to remove tonnes of debris and bring our waterways back to life.",
-    sections: [
+    topics: [
       {
-        heading: "What we do",
-        body: "We organise on-ground cleanup drives along riverbanks and shallow waters. Volunteers segregate plastic, glass, metal, and organic waste so that recyclables don't end up in landfills.",
+        heading: "Clearing Water Hyacinth",
+        body: "One of the major challenges we tackle is the overgrowth of water hyacinth. This invasive plant spreads rapidly, choking rivers, blocking sunlight, and reducing oxygen levels in the water. Our team works tirelessly to remove these thick layers, allowing the river to breathe again and restoring its natural flow.",
+        images: [
+          { src: gallery1, alt: "Volunteers clearing water hyacinth" },
+          { src: gallery5, alt: "River freed from invasive plants" },
+        ],
       },
       {
-        heading: "Why it matters",
-        body: "Polluted rivers harm aquatic life, contaminate drinking water, and worsen flooding. Every cleanup directly improves water quality and protects the communities that depend on these rivers.",
+        heading: "Removing Plastic Waste",
+        body: "Plastic pollution is one of the most visible and harmful threats to our rivers. From bottles and wrappers to single-use plastics, we collect and segregate waste that would otherwise continue to pollute the water and harm aquatic life. Every cleanup drive prevents hundreds of kilograms of plastic from flowing further downstream.",
+        images: [
+          { src: gallery2, alt: "Collecting plastic bottles from river" },
+          { src: gallery3, alt: "Sorting plastic waste for recycling" },
+        ],
       },
       {
-        heading: "How you can help",
-        body: "Join a drive, donate gloves and bags, or simply spread the word. Every pair of hands makes a measurable difference on the day.",
+        heading: "Tackling Mixed Garbage",
+        body: "Beyond plastic, rivers often become dumping grounds for all kinds of waste — clothes, religious offerings, household garbage, and more. Our volunteers step in to remove this debris, ensuring the riverbanks and water remain clean and safe for both people and wildlife.",
+        images: [
+          { src: gallery4, alt: "Mixed garbage being removed from riverbank" },
+          { src: gallery6, alt: "Cleaned riverside after drive" },
+        ],
+      },
+      {
+        heading: "Community Awareness & Responsibility",
+        body: "Cleaning is only one part of the solution. We actively engage with local communities to spread awareness about responsible waste disposal and the importance of protecting our rivers. Our goal is to build a culture where people think before they throw and choose sustainability over convenience.",
+        images: [
+          { src: gallery6, alt: "Community awareness session" },
+          { src: gallery2, alt: "Volunteers engaging with locals" },
+        ],
+      },
+      {
+        heading: "Our Impact",
+        body: "Each drive is a step towards cleaner water, healthier ecosystems, and a more responsible society. With every bag of waste removed and every patch of river restored, we move closer to our vision — a future where rivers flow freely, clean, and respected.",
+        images: [
+          { src: gallery5, alt: "Restored stretch of river" },
+          { src: gallery1, alt: "Team celebrating a successful drive" },
+        ],
       },
     ],
-    images: [
-      { src: gallery1, alt: "Volunteers cleaning river bank" },
-      { src: gallery2, alt: "Team collecting waste near bridge" },
-      { src: gallery5, alt: "Removing debris from water" },
-    ],
+    closing: {
+      heading: "Join us in this movement",
+      body: "Because when we protect our rivers, we protect life itself.",
+    },
   },
   "lake-cleaning": {
     title: "Lake Cleaning Drives",
@@ -133,6 +169,29 @@ const openVolunteerForm = () => {
   window.open(VOLUNTEER_FORM_URL, "_blank", "noopener,noreferrer");
 };
 
+const FanPhotos = ({ images }: { images: { src: string; alt: string }[] }) => (
+  <div className="group relative w-full aspect-[4/5] sm:aspect-[4/3] [perspective:1000px]">
+    {/* Bottom card */}
+    <div className="absolute inset-0 rounded-2xl overflow-hidden bg-muted shadow-md transition-all duration-500 ease-out origin-bottom-left rotate-[-4deg] translate-y-2 group-hover:rotate-[-10deg] group-hover:-translate-x-6 group-hover:translate-y-6 group-hover:shadow-xl">
+      <img
+        src={images[1]?.src ?? images[0].src}
+        alt={images[1]?.alt ?? images[0].alt}
+        loading="lazy"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    {/* Top card */}
+    <div className="absolute inset-0 rounded-2xl overflow-hidden bg-muted shadow-lg transition-all duration-500 ease-out origin-bottom-right rotate-[3deg] group-hover:rotate-[8deg] group-hover:translate-x-6 group-hover:-translate-y-2 group-hover:shadow-2xl">
+      <img
+        src={images[0].src}
+        alt={images[0].alt}
+        loading="lazy"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+);
+
 const ActivityDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const activity = slug ? activities[slug] : undefined;
@@ -149,7 +208,7 @@ const ActivityDetail = () => {
     <>
       <Navbar onVolunteerClick={openVolunteerForm} />
       <main className="pt-24 pb-20">
-        <article className="container mx-auto px-4 max-w-4xl">
+        <article className="container mx-auto px-4 max-w-5xl">
           <Link
             to="/#work"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -168,29 +227,67 @@ const ActivityDetail = () => {
             </div>
           </div>
 
-          <p className="text-lg leading-relaxed mb-12">{activity.intro}</p>
+          <p className="text-lg leading-relaxed mb-16">{activity.intro}</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-            {activity.images.map((img, i) => (
-              <div key={i} className="overflow-hidden rounded-xl aspect-[4/3] bg-muted">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+          {activity.topics ? (
+            <div className="space-y-20 mb-16">
+              {activity.topics.map((t, i) => {
+                const reverse = i % 2 === 1;
+                return (
+                  <section
+                    key={t.heading}
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center ${
+                      reverse ? "md:[&>*:first-child]:order-2" : ""
+                    }`}
+                  >
+                    <div>
+                      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-4">{t.heading}</h2>
+                      <p className="text-muted-foreground leading-relaxed">{t.body}</p>
+                    </div>
+                    <div className="px-4 sm:px-8 md:px-4">
+                      <FanPhotos images={t.images} />
+                    </div>
+                  </section>
+                );
+              })}
 
-          <div className="space-y-8 mb-12">
-            {activity.sections.map((s) => (
-              <section key={s.heading}>
-                <h2 className="font-serif text-2xl font-semibold mb-3">{s.heading}</h2>
-                <p className="text-muted-foreground leading-relaxed">{s.body}</p>
-              </section>
-            ))}
-          </div>
+              {activity.closing && (
+                <section className="text-center max-w-2xl mx-auto pt-4">
+                  <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-3">
+                    {activity.closing.heading}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">{activity.closing.body}</p>
+                </section>
+              )}
+            </div>
+          ) : (
+            <>
+              {activity.images && (
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+                  {activity.images.map((img, i) => (
+                    <div key={i} className="overflow-hidden rounded-xl aspect-[4/3] bg-muted">
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+              {activity.sections && (
+                <div className="space-y-8 mb-12">
+                  {activity.sections.map((s) => (
+                    <section key={s.heading}>
+                      <h2 className="font-serif text-2xl font-semibold mb-3">{s.heading}</h2>
+                      <p className="text-muted-foreground leading-relaxed">{s.body}</p>
+                    </section>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
 
           <div className="bg-accent/50 border border-border rounded-2xl p-8 text-center">
             <h3 className="font-serif text-2xl font-semibold mb-3">Want to be part of it?</h3>
