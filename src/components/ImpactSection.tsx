@@ -1,5 +1,6 @@
 import { Waves, TreePine, Megaphone, Droplets, Users, MapPin, Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 const activities = [
   { icon: Waves, title: "River Cleaning Drives", desc: "Restoring rivers by removing waste and debris from waterways.", slug: "river-cleaning" },
@@ -14,6 +15,44 @@ const stats = [
   { icon: TreePine, value: "700+", label: "Trees Planted" },
   { icon: MapPin, value: "12+", label: "Locations Covered" },
 ];
+
+const useCountUp = (end: number, duration = 2000, trigger = false) => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!trigger) return;
+    let start = 0;
+    const step = Math.ceil(end / (duration / 16));
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= end) { setCount(end); clearInterval(timer); }
+      else setCount(start);
+    }, 16);
+    return () => clearInterval(timer);
+  }, [trigger, end, duration]);
+  return count;
+};
+
+const StatItem = ({ icon: Icon, value, label }: { icon: any; value: string; label: string }) => {
+  const num = parseInt(value);
+  const suffix = value.replace(/[0-9]/g, "");
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold: 0.3 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  const display = useCountUp(num, 2000, visible);
+  return (
+    <div ref={ref} className="text-center">
+      <Icon className="w-8 h-8 text-primary-foreground/70 mx-auto mb-3" />
+      <div className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-1">{display}{suffix}</div>
+      <div className="text-sm text-primary-foreground/70">{label}</div>
+    </div>
+  );
+};
 
 const ImpactSection = () => (
   <section id="work" className="py-24">
@@ -44,11 +83,7 @@ const ImpactSection = () => (
       <div className="bg-primary rounded-2xl p-8 md:p-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <s.icon className="w-8 h-8 text-primary-foreground/70 mx-auto mb-3" />
-              <div className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-1">{s.value}</div>
-              <div className="text-sm text-primary-foreground/70">{s.label}</div>
-            </div>
+            <StatItem key={s.label} icon={s.icon} value={s.value} label={s.label} />
           ))}
         </div>
       </div>
