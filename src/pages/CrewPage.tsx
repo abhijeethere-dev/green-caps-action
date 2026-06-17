@@ -3,10 +3,13 @@ import { ArrowLeft, User, Star } from "lucide-react";
 
 const CREW_COUNT = 20;
 
-const crew = Array.from({ length: CREW_COUNT }, (_, i) => ({
-  name: `Crew Member ${i + 1}`,
-  role: "Volunteer",
-}));
+const crew = Array.from({ length: CREW_COUNT }, (_, i) => {
+  const names = ["Alok Sharma", "Prem Kumar", "Abhijeet Kumar"];
+  if (i < 3) {
+    return { name: names[i], role: "Director" };
+  }
+  return { name: `Crew Member ${i + 1}`, role: "Volunteer" };
+});
 
 const mentors = [
   {
