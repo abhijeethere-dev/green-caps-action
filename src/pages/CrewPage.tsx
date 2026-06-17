@@ -39,7 +39,7 @@ const CrewPage = () => (
 
       <section className="mb-20">
         <h2 className="font-serif text-2xl font-semibold mb-8">Mentors</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {mentors.map((m, i) => (
             <div
               key={i}
@@ -48,7 +48,7 @@ const CrewPage = () => (
               <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Star className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="font-medium text-lg">{m.name}</h3>
+              <h3 className="font-bold text-lg">{m.name}</h3>
               <p className="text-sm text-muted-foreground mt-1">{m.role}</p>
             </div>
           ))}
