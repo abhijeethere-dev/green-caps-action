@@ -6,7 +6,10 @@ const mentors = [
     name: "Sita Gupta", 
     role: "She has been a constant source of warmth, guidance, and encouragement for Greencaps Foundation. A compassionate counsellor by profession and a nurturing soul by nature, she has always been there to support us whenever we needed advice, direction, or simply a listening ear. Her home has often been a place of comfort and learning, where she welcomed us with kindness and genuine care. Her belief in our work and her unwavering support continue to inspire us as we strive to create a positive impact in our community." 
   },
-  { name: "Gaurav Anand", role: "Mentor" },
+  { 
+    name: "Gaurav Anand", 
+    role: "He has been an invaluable mentor to Greencaps Foundation, guiding us with his extensive experience in grassroots social work and community engagement. As the founder of a fellow NGO, he brings practical insights and a deep understanding of on-ground challenges. His mentorship has helped us strengthen our field operations, build meaningful community connections, and approach our work with greater purpose and impact. We are grateful for his continuous support, encouragement, and leadership." 
+  },
 ];
 
 const CrewSection = () => (
