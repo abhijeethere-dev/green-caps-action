@@ -3,7 +3,7 @@ import { ArrowRight, Star } from "lucide-react";
 
 const mentors = [
   { name: "Sita Gupta", role: "Mentor" },
-  { name: "Mentor 2", role: "Mentor" },
+  { name: "Gaurav Anand", role: "Mentor" },
 ];
 
 const CrewSection = () => (
