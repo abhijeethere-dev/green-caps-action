@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
-const PREVIEW_COUNT = 8;
-const crew = Array.from({ length: PREVIEW_COUNT }, (_, i) => ({
-  name: `Crew Member ${i + 1}`,
-  role: "Volunteer",
+const mentors = Array.from({ length: 2 }, (_, i) => ({
+  name: `Mentor ${i + 1}`,
+  role: "Mentor",
 }));
 
 const CrewSection = () => (
@@ -17,17 +16,17 @@ const CrewSection = () => (
         The hands, hearts, and minds behind every Greencaps drive.
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {crew.map((m, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        {mentors.map((m, i) => (
           <div
             key={i}
-            className="flex flex-col items-center text-center p-6 rounded-xl bg-card border border-border hover:shadow-md transition-shadow"
+            className="flex flex-col items-center text-center p-8 rounded-2xl bg-card border border-primary/30 shadow-sm"
           >
-            <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mb-4">
-              <User className="w-9 h-9 text-muted-foreground" />
+            <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <Star className="w-10 h-10 text-primary" />
             </div>
-            <h3 className="font-medium">{m.name}</h3>
-            <p className="text-xs text-muted-foreground mt-1">{m.role}</p>
+            <h3 className="font-medium text-lg">{m.name}</h3>
+            <p className="text-sm text-muted-foreground mt-1">{m.role}</p>
           </div>
         ))}
       </div>
