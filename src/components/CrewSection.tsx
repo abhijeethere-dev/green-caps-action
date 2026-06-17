@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 
 const mentors = [
-  { name: "Sita Gupta", role: "Mentor" },
+  { 
+    name: "Sita Gupta", 
+    role: "She has been a constant source of warmth, guidance, and encouragement for Greencaps Foundation. A compassionate counsellor by profession and a nurturing soul by nature, she has always been there to support us whenever we needed advice, direction, or simply a listening ear. Her home has often been a place of comfort and learning, where she welcomed us with kindness and genuine care. Her belief in our work and her unwavering support continue to inspire us as we strive to create a positive impact in our community." 
+  },
   { name: "Gaurav Anand", role: "Mentor" },
 ];
 
