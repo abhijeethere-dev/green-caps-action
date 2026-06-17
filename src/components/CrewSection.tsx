@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 
-const mentors = Array.from({ length: 2 }, (_, i) => ({
-  name: `Mentor ${i + 1}`,
-  role: "Mentor",
-}));
+const mentors = [
+  { name: "Sita Gupta", role: "Mentor" },
+  { name: "Mentor 2", role: "Mentor" },
+];
 
 const CrewSection = () => (
   <section id="crew" className="py-24 bg-background">
