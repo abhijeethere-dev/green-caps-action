@@ -25,7 +25,7 @@ const CrewSection = () => (
             <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <Star className="w-10 h-10 text-primary" />
             </div>
-            <h3 className="font-medium text-lg">{m.name}</h3>
+            <h3 className="font-bold text-lg">{m.name}</h3>
             <p className="text-sm text-muted-foreground mt-1">{m.role}</p>
           </div>
         ))}
