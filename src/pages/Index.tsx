@@ -5,6 +5,7 @@ import ImpactSection from "@/components/ImpactSection";
 import GallerySection from "@/components/GallerySection";
 import DonationSection from "@/components/DonationSection";
 import UpcycleSection from "@/components/UpcycleSection";
+import CrewSection from "@/components/CrewSection";
 import EmotionalSection from "@/components/EmotionalSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ const Index = () => {
       <ImpactSection />
       <DonationSection />
       <UpcycleSection />
+      <CrewSection />
       <GallerySection />
       <EmotionalSection onVolunteerClick={openVolunteerForm} />
       <CTASection onVolunteerClick={openVolunteerForm} />
