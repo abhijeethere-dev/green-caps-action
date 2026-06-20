@@ -44,7 +44,13 @@ const members: Member[] = [
     bio: "Founder of a fellow NGO whose grassroots experience shapes our field operations and community engagement.",
   },
   {
-    name: "Alok Sharma",
+    name: "Sumanto Banerjee",
+    designation: "Mentor",
+    message:
+      "Thoughtful counsel and steady encouragement help refine our approach and keep our work grounded in purpose.",
+    responsibilities: ["Strategic Advisory", "Counsel & Guidance", "Mentorship"],
+    bio: "Sumanto Banerjee continues to guide Greencaps Foundation with thoughtful counsel and steady encouragement. His perspective helps us refine our approach, strengthen our intent, and keep our work grounded in purpose.",
+  },
     designation: "Director",
     message:
       "Strong leadership and collective effort can transform ideas into lasting impact.",
