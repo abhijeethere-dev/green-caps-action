@@ -1,5 +1,5 @@
 import { Shirt, Utensils } from "lucide-react";
-import donationImg from "@/assets/donation-drive.jpg";
+import donationImg from "@/assets/donation-drive.jpeg.asset.json";
 
 const items = [
   {
@@ -29,7 +29,7 @@ const DonationSection = () => (
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="overflow-hidden rounded-2xl shadow-md">
           <img
-            src={donationImg}
+            src={donationImg.url}
             alt="Volunteers distributing clothes and food to the community"
             loading="lazy"
             width={1024}
