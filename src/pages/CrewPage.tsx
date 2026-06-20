@@ -44,6 +44,14 @@ const members: Member[] = [
     bio: "Founder of a fellow NGO whose grassroots experience shapes our field operations and community engagement.",
   },
   {
+    name: "Sumanto Banerjee",
+    designation: "Mentor",
+    message:
+      "Thoughtful counsel and steady encouragement help refine our approach and keep our work grounded in purpose.",
+    responsibilities: ["Strategic Advisory", "Counsel & Guidance", "Mentorship"],
+    bio: "Sumanto Banerjee continues to guide Greencaps Foundation with thoughtful counsel and steady encouragement. His perspective helps us refine our approach, strengthen our intent, and keep our work grounded in purpose.",
+  },
+  {
     name: "Alok Sharma",
     designation: "Director",
     message:
@@ -233,7 +241,7 @@ const CrewPage = () => {
   ];
 
   const stats = [
-    { label: "Mentors", value: 2 },
+    { label: "Mentors", value: 3 },
     { label: "Directors", value: 3 },
     { label: "Coordinators", value: 8 },
     { label: "Media", value: 3 },
@@ -287,7 +295,7 @@ const CrewPage = () => {
               <h2 className="font-serif text-2xl md:text-3xl font-semibold">Featured Mentors</h2>
               <span className="flex-1 h-px bg-primary/20" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {members
                 .filter((m) => m.designation === "Mentor")
                 .map((m) => (
@@ -352,7 +360,7 @@ const CrewPage = () => {
         ) : (
           <>
             {mentors.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
                 {mentors.map((m) => (
                   <MemberCard key={m.name} m={m} onOpen={() => setActive(m)} featured />
                 ))}
