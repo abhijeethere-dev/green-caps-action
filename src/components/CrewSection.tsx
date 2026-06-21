@@ -8,12 +8,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
 
 type Mentor = {
   name: string;
   title: string;
   intro: string;
   bio: string;
+  image?: string;
 };
 
 const featured: Mentor = {
@@ -22,15 +24,24 @@ const featured: Mentor = {
   intro:
     "Founder of a fellow NGO and a grassroots social worker whose guidance has shaped how Greencaps operates on the ground.",
   bio: "Gaurav Anand has been an invaluable mentor to Greencaps Foundation, guiding us with his extensive experience in grassroots social work and community engagement. As the founder of a fellow NGO, he brings practical insights and a deep understanding of on-ground challenges. His mentorship has helped us strengthen our field operations, build meaningful community connections, and approach our work with greater purpose and impact. We are grateful for his continuous support, encouragement, and leadership.",
+  image: gauravHeadshot.url,
 };
 
-const Avatar = ({ size }: { size: "lg" | "md" }) => (
+const Avatar = ({ size, src }: { size: "lg" | "md"; src?: string }) => (
   <div
     className={`${
       size === "lg" ? "w-48 h-48" : "w-32 h-32"
     } rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-accent border-4 border-primary/30 flex items-center justify-center mb-6 transition-colors overflow-hidden shadow-inner`}
   >
-    <User className={`${size === "lg" ? "w-24 h-24" : "w-16 h-16"} text-primary/60`} />
+    {src ? (
+      <img
+        src={src}
+        alt="Gaurav Anand"
+        className="w-full h-full object-cover"
+      />
+    ) : (
+      <User className={`${size === "lg" ? "w-24 h-24" : "w-16 h-16"} text-primary/60`} />
+    )}
   </div>
 );
 
@@ -59,7 +70,7 @@ const CrewSection = () => {
             <span className="absolute top-6 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
               <Sparkles size={12} /> Featured Mentor
             </span>
-            <Avatar size="lg" />
+            <Avatar size="lg" src={featured.image} />
             <h3 className="font-serif text-2xl md:text-3xl font-bold">{featured.name}</h3>
             <p className="text-sm font-semibold text-primary uppercase tracking-widest mt-2">
               {featured.title}
@@ -93,7 +104,7 @@ const CrewSection = () => {
           {active && (
             <div className="animate-scale-in">
               <div className="flex flex-col items-center text-center">
-                <Avatar size="md" />
+                <Avatar size="md" src={active.image} />
                 <DialogHeader>
                   <DialogTitle className="font-serif text-2xl">{active.name}</DialogTitle>
                   <DialogDescription asChild>

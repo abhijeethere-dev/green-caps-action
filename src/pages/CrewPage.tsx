@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
 
 type Department =
   | "Mentor"
@@ -24,6 +25,7 @@ type Member = {
   message: string;
   responsibilities: string[];
   bio?: string;
+  image?: string;
 };
 
 const members: Member[] = [
@@ -42,6 +44,7 @@ const members: Member[] = [
       "Real change happens on the ground, built through patience, presence, and partnership.",
     responsibilities: ["Field Mentorship", "Community Strategy", "NGO Collaboration"],
     bio: "Founder of a fellow NGO whose grassroots experience shapes our field operations and community engagement.",
+    image: gauravHeadshot.url,
   },
   {
     name: "Sumanto Banerjee",
@@ -201,9 +204,17 @@ const MemberCard = ({ m, onOpen, featured }: { m: Member; onOpen: () => void; fe
         featured ? "w-36 h-36" : "w-28 h-28"
       } rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-accent border-4 border-primary/20 group-hover:border-primary/60 flex items-center justify-center mb-4 overflow-hidden transition-colors`}
     >
-      <span className="font-serif text-2xl font-semibold text-primary">
-        {initials(m.name)}
-      </span>
+      {m.image ? (
+        <img
+          src={m.image}
+          alt={m.name}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <span className="font-serif text-2xl font-semibold text-primary">
+          {initials(m.name)}
+        </span>
+      )}
     </div>
     <h3 className={`font-semibold ${featured ? "text-lg" : "text-base"}`}>{m.name}</h3>
     <p className="text-xs font-medium text-primary uppercase tracking-wide mt-1">
@@ -386,10 +397,18 @@ const CrewPage = () => {
           {active && (
             <div className="animate-scale-in">
               <div className="flex flex-col items-center text-center">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary/30 via-primary/10 to-accent border-4 border-primary/30 flex items-center justify-center mb-4">
-                  <span className="font-serif text-3xl font-semibold text-primary">
-                    {initials(active.name)}
-                  </span>
+                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary/30 via-primary/10 to-accent border-4 border-primary/30 flex items-center justify-center mb-4 overflow-hidden">
+                  {active.image ? (
+                    <img
+                      src={active.image}
+                      alt={active.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="font-serif text-3xl font-semibold text-primary">
+                      {initials(active.name)}
+                    </span>
+                  )}
                 </div>
                 <DialogHeader>
                   <DialogTitle className="font-serif text-2xl">{active.name}</DialogTitle>
