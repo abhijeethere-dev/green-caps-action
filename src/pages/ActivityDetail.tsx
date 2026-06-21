@@ -14,11 +14,17 @@ import riverHyacinthAsset from "@/assets/river-hyacinth.jpg.asset.json";
 import riverMixedGarbageAsset from "@/assets/river-mixed-garbage.jpg.asset.json";
 import riverImpactAsset from "@/assets/river-impact.jpg.asset.json";
 import riverAwarenessAsset from "@/assets/river-awareness.jpg.asset.json";
+import lakeDriveAsset from "@/assets/lake-cleaning-drive.jpg.asset.json";
+import lakeWasteAsset from "@/assets/lake-waste-debris.jpg.asset.json";
+import lakeBalanceAsset from "@/assets/lake-natural-balance.jpg.asset.json";
 
 const riverHyacinth = riverHyacinthAsset.url;
 const riverMixedGarbage = riverMixedGarbageAsset.url;
 const riverImpact = riverImpactAsset.url;
 const riverAwareness = riverAwarenessAsset.url;
+const lakeDrive = lakeDriveAsset.url;
+const lakeWaste = lakeWasteAsset.url;
+const lakeBalance = lakeBalanceAsset.url;
 
 const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/1VqfPFzt5Zdl1Bw5ylF-XJXASoQvMVMxc4LCKzijFT3U/edit";
 
@@ -100,17 +106,17 @@ const activities: Record<string, Activity> = {
       {
         heading: "Lake Cleaning Drives",
         body: "Our team regularly conducts cleaning drives to remove plastic waste, discarded materials, and other pollutants from lake surfaces and surrounding areas. By clearing this waste, we help restore the natural beauty of lakes and prevent long-term environmental damage.",
-        images: [{ src: gallery3, alt: "Volunteers conducting a lake cleaning drive" }],
+        images: [{ src: lakeDrive, alt: "Volunteers conducting a lake cleaning drive" }],
       },
       {
         heading: "Removing Waste & Debris",
         body: "From single-use plastics to immersion waste and everyday garbage, lakes often bear the burden of human negligence. Our volunteers step in to remove this debris, ensuring a cleaner and safer environment for aquatic life and local communities.",
-        images: [{ src: gallery4, alt: "Debris being removed from the lakeside" }],
+        images: [{ src: lakeWaste, alt: "Debris being removed from the lakeside" }],
       },
       {
         heading: "Restoring Natural Balance",
         body: "By cleaning lakes and reducing pollution, we contribute to improving water quality and supporting the ecosystem that depends on it. Every effort helps bring lakes closer to their natural, thriving state.",
-        images: [{ src: gallery6, alt: "Restored lake shore after a drive" }],
+        images: [{ src: lakeBalance, alt: "Restored lake shore after a drive" }],
       },
     ],
     closing: {
