@@ -70,7 +70,7 @@ const CrewSection = () => {
             <span className="absolute top-6 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
               <Sparkles size={12} /> Featured Mentor
             </span>
-            <Avatar size="lg" />
+            <Avatar size="lg" src={featured.image} />
             <h3 className="font-serif text-2xl md:text-3xl font-bold">{featured.name}</h3>
             <p className="text-sm font-semibold text-primary uppercase tracking-widest mt-2">
               {featured.title}
@@ -104,7 +104,7 @@ const CrewSection = () => {
           {active && (
             <div className="animate-scale-in">
               <div className="flex flex-col items-center text-center">
-                <Avatar size="md" />
+                <Avatar size="md" src={active.image} />
                 <DialogHeader>
                   <DialogTitle className="font-serif text-2xl">{active.name}</DialogTitle>
                   <DialogDescription asChild>
