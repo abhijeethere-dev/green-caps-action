@@ -10,6 +10,15 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import riverHyacinthAsset from "@/assets/river-hyacinth.jpg.asset.json";
+import riverMixedGarbageAsset from "@/assets/river-mixed-garbage.jpg.asset.json";
+import riverImpactAsset from "@/assets/river-impact.jpg.asset.json";
+import riverAwarenessAsset from "@/assets/river-awareness.jpg.asset.json";
+
+const riverHyacinth = riverHyacinthAsset.url;
+const riverMixedGarbage = riverMixedGarbageAsset.url;
+const riverImpact = riverImpactAsset.url;
+const riverAwareness = riverAwarenessAsset.url;
 
 const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/1VqfPFzt5Zdl1Bw5ylF-XJXASoQvMVMxc4LCKzijFT3U/edit";
 
@@ -43,8 +52,7 @@ const activities: Record<string, Activity> = {
         heading: "Clearing Water Hyacinth",
         body: "One of the major challenges we tackle is the overgrowth of water hyacinth. This invasive plant spreads rapidly, choking rivers, blocking sunlight, and reducing oxygen levels in the water. Our team works tirelessly to remove these thick layers, allowing the river to breathe again and restoring its natural flow.",
         images: [
-          { src: gallery1, alt: "Volunteers clearing water hyacinth" },
-          { src: gallery5, alt: "River freed from invasive plants" },
+          { src: riverHyacinth, alt: "Volunteers clearing water hyacinth from the river" },
         ],
       },
       {
@@ -59,24 +67,21 @@ const activities: Record<string, Activity> = {
         heading: "Tackling Mixed Garbage",
         body: "Beyond plastic, rivers often become dumping grounds for all kinds of waste — clothes, religious offerings, household garbage, and more. Our volunteers step in to remove this debris, ensuring the riverbanks and water remain clean and safe for both people and wildlife.",
         images: [
-          { src: gallery4, alt: "Mixed garbage being removed from riverbank" },
-          { src: gallery6, alt: "Cleaned riverside after drive" },
+          { src: riverMixedGarbage, alt: "Mixed garbage being removed from riverbank" },
         ],
       },
       {
         heading: "Community Awareness & Responsibility",
         body: "Cleaning is only one part of the solution. We actively engage with local communities to spread awareness about responsible waste disposal and the importance of protecting our rivers. Our goal is to build a culture where people think before they throw and choose sustainability over convenience.",
         images: [
-          { src: gallery6, alt: "Community awareness session" },
-          { src: gallery2, alt: "Volunteers engaging with locals" },
+          { src: riverAwareness, alt: "Community awareness session with volunteers" },
         ],
       },
       {
         heading: "Our Impact",
         body: "Each drive is a step towards cleaner water, healthier ecosystems, and a more responsible society. With every bag of waste removed and every patch of river restored, we move closer to our vision — a future where rivers flow freely, clean, and respected.",
         images: [
-          { src: gallery5, alt: "Restored stretch of river" },
-          { src: gallery1, alt: "Team celebrating a successful drive" },
+          { src: riverImpact, alt: "Our impact on river restoration" },
         ],
       },
     ],
