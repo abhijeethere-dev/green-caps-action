@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
 
 type Department =
   | "Mentor"
@@ -24,6 +25,7 @@ type Member = {
   message: string;
   responsibilities: string[];
   bio?: string;
+  image?: string;
 };
 
 const members: Member[] = [
@@ -42,6 +44,7 @@ const members: Member[] = [
       "Real change happens on the ground, built through patience, presence, and partnership.",
     responsibilities: ["Field Mentorship", "Community Strategy", "NGO Collaboration"],
     bio: "Founder of a fellow NGO whose grassroots experience shapes our field operations and community engagement.",
+    image: gauravHeadshot.url,
   },
   {
     name: "Sumanto Banerjee",
