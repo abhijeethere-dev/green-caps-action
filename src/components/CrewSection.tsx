@@ -8,12 +8,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
 
 type Mentor = {
   name: string;
   title: string;
   intro: string;
   bio: string;
+  image?: string;
 };
 
 const featured: Mentor = {
@@ -22,15 +24,24 @@ const featured: Mentor = {
   intro:
     "Founder of a fellow NGO and a grassroots social worker whose guidance has shaped how Greencaps operates on the ground.",
   bio: "Gaurav Anand has been an invaluable mentor to Greencaps Foundation, guiding us with his extensive experience in grassroots social work and community engagement. As the founder of a fellow NGO, he brings practical insights and a deep understanding of on-ground challenges. His mentorship has helped us strengthen our field operations, build meaningful community connections, and approach our work with greater purpose and impact. We are grateful for his continuous support, encouragement, and leadership.",
+  image: gauravHeadshot.url,
 };
 
-const Avatar = ({ size }: { size: "lg" | "md" }) => (
+const Avatar = ({ size, src }: { size: "lg" | "md"; src?: string }) => (
   <div
     className={`${
       size === "lg" ? "w-48 h-48" : "w-32 h-32"
     } rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-accent border-4 border-primary/30 flex items-center justify-center mb-6 transition-colors overflow-hidden shadow-inner`}
   >
-    <User className={`${size === "lg" ? "w-24 h-24" : "w-16 h-16"} text-primary/60`} />
+    {src ? (
+      <img
+        src={src}
+        alt="Gaurav Anand"
+        className="w-full h-full object-cover"
+      />
+    ) : (
+      <User className={`${size === "lg" ? "w-24 h-24" : "w-16 h-16"} text-primary/60`} />
+    )}
   </div>
 );
 
