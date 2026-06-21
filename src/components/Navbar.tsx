@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ onVolunteerClick }: { onVolunteerClick: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +31,14 @@ const Navbar = ({ onVolunteerClick }: { onVolunteerClick: () => void }) => {
               {link.label}
             </a>
           ))}
-          <Button size="sm" onClick={onVolunteerClick}>
-            Join Us
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button size="sm" onClick={onVolunteerClick}>
+              Join Us
+            </Button>
+            <Button size="sm" variant="outline" asChild>
+              <Link to="/donate">Donate</Link>
+            </Button>
+          </div>
         </div>
 
         <button
@@ -57,6 +63,9 @@ const Navbar = ({ onVolunteerClick }: { onVolunteerClick: () => void }) => {
           ))}
           <Button size="sm" className="w-full" onClick={() => { onVolunteerClick(); setIsOpen(false); }}>
             Join Us
+          </Button>
+          <Button size="sm" variant="outline" className="w-full" asChild>
+            <Link to="/donate" onClick={() => setIsOpen(false)}>Donate</Link>
           </Button>
         </div>
       )}
