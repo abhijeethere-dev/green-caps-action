@@ -204,9 +204,17 @@ const MemberCard = ({ m, onOpen, featured }: { m: Member; onOpen: () => void; fe
         featured ? "w-36 h-36" : "w-28 h-28"
       } rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-accent border-4 border-primary/20 group-hover:border-primary/60 flex items-center justify-center mb-4 overflow-hidden transition-colors`}
     >
-      <span className="font-serif text-2xl font-semibold text-primary">
-        {initials(m.name)}
-      </span>
+      {m.image ? (
+        <img
+          src={m.image}
+          alt={m.name}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <span className="font-serif text-2xl font-semibold text-primary">
+          {initials(m.name)}
+        </span>
+      )}
     </div>
     <h3 className={`font-semibold ${featured ? "text-lg" : "text-base"}`}>{m.name}</h3>
     <p className="text-xs font-medium text-primary uppercase tracking-wide mt-1">
