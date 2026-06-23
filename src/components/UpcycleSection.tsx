@@ -1,5 +1,28 @@
 import { Recycle } from "lucide-react";
-import upcycleImg from "@/assets/upcycle.jpg";
+import planterAsset from "@/assets/upcycle-planter.jpeg.asset.json";
+import functionalAsset from "@/assets/upcycle-functional.jpeg.asset.json";
+import awarenessAsset from "@/assets/upcycle-awareness.jpeg.asset.json";
+
+const items = [
+  {
+    title: "Planters & Vases",
+    desc: "Plastic bottles turned into hanging gardens and home decor.",
+    image: planterAsset.url,
+    alt: "Upcycled bottle vase with sculpted vines and roses",
+  },
+  {
+    title: "Functional Crafts",
+    desc: "Pen holders, lamps, and storage made from discarded waste.",
+    image: functionalAsset.url,
+    alt: "Hand-crafted cardboard temple made from discarded materials",
+  },
+  {
+    title: "Awareness Pieces",
+    desc: "Pieces found on our river cleaning drives and restored as art that tells their story.",
+    image: awarenessAsset.url,
+    alt: "Restored Hanuman idol recovered during a river cleaning drive",
+  },
+];
 
 const UpcycleSection = () => (
   <section id="upcycle" className="py-24 bg-muted">
@@ -18,32 +41,23 @@ const UpcycleSection = () => (
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 items-stretch">
-        <div className="md:col-span-2 overflow-hidden rounded-2xl shadow-md group">
-          <img
-            src={upcycleImg}
-            alt="Upcycled items made from river and lake waste"
-            loading="lazy"
-            width={1024}
-            height={1024}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-        <div className="grid gap-6">
-          {[
-            { title: "Planters & Vases", desc: "Plastic bottles turned into hanging gardens and home decor." },
-            { title: "Functional Crafts", desc: "Pen holders, lamps, and storage made from discarded waste." },
-            { title: "Awareness Pieces", desc: "Art installations that tell the story of where this waste came from." },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="p-6 rounded-xl bg-card border border-border hover:shadow-md transition-shadow"
-            >
+      <div className="grid md:grid-cols-3 gap-8">
+        {items.map((item) => (
+          <div key={item.title} className="flex flex-col space-y-4">
+            <div className="overflow-hidden rounded-2xl shadow-md aspect-[4/5] bg-muted group">
+              <img
+                src={item.image}
+                alt={item.alt}
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 rounded-xl bg-card border border-border hover:shadow-md transition-shadow flex-1">
               <h3 className="font-serif text-lg font-semibold mb-2">{item.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
