@@ -90,10 +90,34 @@ const members: Member[] = [
     ],
   },
   {
+    name: "Ujjwal Das",
+    designation: "Coordinator",
+    message: "Bringing people together is the first step toward meaningful change.",
+    responsibilities: ["Team Leadership", "Volunteer Coordination", "Event Planning"],
+  },
+  {
     name: "Nivedita Samad",
     designation: "Coordinator",
     message: "Small actions, when taken together, create extraordinary change.",
     responsibilities: ["Volunteer Coordination", "Event Planning", "Community Outreach"],
+  },
+  {
+    name: "Sonam Kumari",
+    designation: "Coordinator",
+    message: "Dedicated effort and teamwork create lasting community impact.",
+    responsibilities: ["Volunteer Support", "Community Engagement", "Program Coordination"],
+  },
+  {
+    name: "Bhumika Kumari",
+    designation: "Coordinator",
+    message: "Every small step toward progress builds a stronger tomorrow.",
+    responsibilities: ["Community Outreach", "Event Coordination", "Awareness Campaigns"],
+  },
+  {
+    name: "Shashwat Tripathi",
+    designation: "Coordinator",
+    message: "True coordination turns vision into collective action.",
+    responsibilities: ["Activity Management", "Team Coordination", "Field Operations"],
   },
   {
     name: "Saurabh Sinha",
