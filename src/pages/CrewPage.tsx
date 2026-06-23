@@ -198,6 +198,12 @@ const members: Member[] = [
     message: "Behind every successful event is efficient planning and seamless execution.",
     responsibilities: ["Logistics Management", "Resource Coordination", "Event Support"],
   },
+  {
+    name: "Naveen Hembram",
+    designation: "Logistics Team",
+    message: "Smooth operations are the backbone of every successful mission.",
+    responsibilities: ["Logistics Coordination", "Resource Management", "Event Support"],
+  },
 ];
 
 const departments: ("All" | Department)[] = [
