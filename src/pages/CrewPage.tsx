@@ -284,10 +284,10 @@ const CrewPage = () => {
   const stats = [
     { label: "Mentors", value: 3 },
     { label: "Directors", value: 3 },
-    { label: "Coordinators", value: 8 },
+    { label: "Coordinators", value: 12 },
     { label: "Media", value: 3 },
     { label: "Medical", value: 2 },
-    { label: "Logistics", value: 1 },
+    { label: "Logistics", value: 2 },
   ];
 
   return (
