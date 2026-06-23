@@ -6,19 +6,19 @@ import awarenessAsset from "@/assets/upcycle-awareness.jpeg.asset.json";
 const items = [
   {
     title: "Planters & Vases",
-    desc: "Plastic bottles turned into hanging gardens and home decor.",
+    desc: "Discarded plastic bottles turned into hand made vase decor.",
     image: planterAsset.url,
     alt: "Upcycled bottle vase with sculpted vines and roses",
   },
   {
     title: "Functional Crafts",
-    desc: "Pen holders, lamps, and storage made from discarded waste.",
+    desc: "Transformed waste cardboard into chariot.",
     image: functionalAsset.url,
     alt: "Hand-crafted cardboard temple made from discarded materials",
   },
   {
     title: "Awareness Pieces",
-    desc: "Pieces found on our river cleaning drives and restored as art that tells their story.",
+    desc: "Idol found on our river cleaning drives and restored as art that tells their story.",
     image: awarenessAsset.url,
     alt: "Restored Hanuman idol recovered during a river cleaning drive",
   },
