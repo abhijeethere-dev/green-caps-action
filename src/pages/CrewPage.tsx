@@ -90,10 +90,34 @@ const members: Member[] = [
     ],
   },
   {
+    name: "Ujjwal Das",
+    designation: "Coordinator",
+    message: "Bringing people together is the first step toward meaningful change.",
+    responsibilities: ["Team Leadership", "Volunteer Coordination", "Event Planning"],
+  },
+  {
     name: "Nivedita Samad",
     designation: "Coordinator",
     message: "Small actions, when taken together, create extraordinary change.",
     responsibilities: ["Volunteer Coordination", "Event Planning", "Community Outreach"],
+  },
+  {
+    name: "Sonam Kumari",
+    designation: "Coordinator",
+    message: "Dedicated effort and teamwork create lasting community impact.",
+    responsibilities: ["Volunteer Support", "Community Engagement", "Program Coordination"],
+  },
+  {
+    name: "Bhumika Kumari",
+    designation: "Coordinator",
+    message: "Every small step toward progress builds a stronger tomorrow.",
+    responsibilities: ["Community Outreach", "Event Coordination", "Awareness Campaigns"],
+  },
+  {
+    name: "Shashwat Tripathi",
+    designation: "Coordinator",
+    message: "True coordination turns vision into collective action.",
+    responsibilities: ["Activity Management", "Team Coordination", "Field Operations"],
   },
   {
     name: "Saurabh Sinha",
@@ -173,6 +197,12 @@ const members: Member[] = [
     designation: "Logistics Team",
     message: "Behind every successful event is efficient planning and seamless execution.",
     responsibilities: ["Logistics Management", "Resource Coordination", "Event Support"],
+  },
+  {
+    name: "Naveen Hembram",
+    designation: "Logistics Team",
+    message: "Smooth operations are the backbone of every successful mission.",
+    responsibilities: ["Logistics Coordination", "Resource Management", "Event Support"],
   },
 ];
 
@@ -254,10 +284,10 @@ const CrewPage = () => {
   const stats = [
     { label: "Mentors", value: 3 },
     { label: "Directors", value: 3 },
-    { label: "Coordinators", value: 8 },
+    { label: "Coordinators", value: 12 },
     { label: "Media", value: 3 },
     { label: "Medical", value: 2 },
-    { label: "Logistics", value: 1 },
+    { label: "Logistics", value: 2 },
   ];
 
   return (
