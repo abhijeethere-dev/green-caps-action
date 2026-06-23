@@ -132,13 +132,13 @@ const members: Member[] = [
     responsibilities: ["Event Operations", "Team Coordination", "Field Activities"],
   },
   {
-    name: "Anku",
+    name: "Anku Kumari",
     designation: "Coordinator",
     message: "Impact grows through teamwork, dedication, and consistent effort.",
     responsibilities: ["Volunteer Coordination", "Activity Planning", "Community Support"],
   },
   {
-    name: "Shankar",
+    name: "Shankar Mahato",
     designation: "Media Team",
     message: "Stories inspire action and help communities connect with meaningful causes.",
     responsibilities: ["Content Creation", "Photography", "Awareness Campaigns"],
@@ -151,7 +151,7 @@ const members: Member[] = [
     responsibilities: ["Media Documentation", "Content Production", "Social Media Support"],
   },
   {
-    name: "Pronove",
+    name: "Pronove Mahato",
     designation: "Media Team",
     message: "Every initiative deserves to have its impact shared with the world.",
     responsibilities: ["Digital Media", "Event Coverage", "Content Management"],
@@ -163,7 +163,7 @@ const members: Member[] = [
     responsibilities: ["Health Awareness", "Medical Support", "Community Wellness Initiatives"],
   },
   {
-    name: "Tanu",
+    name: "Tanu Kumari",
     designation: "Medical Team",
     message: "Serving people through care and compassion creates meaningful impact.",
     responsibilities: ["Health Support", "Medical Assistance", "Community Outreach"],
