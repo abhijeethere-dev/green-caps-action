@@ -27,13 +27,13 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0" />
-              <a href="mailto:contact@greencaps.org" className="hover:text-primary-foreground transition-colors">
-                contact@greencaps.org
+              <a href="mailto:greencapsj@gmail.com" className="hover:text-primary-foreground transition-colors">
+                greencapsj@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 shrink-0" />
-              <span>+91 98765 43210</span>
+              <span>+91 62046 92509 / +91 62078 09536</span>
             </div>
           </div>
         </div>
