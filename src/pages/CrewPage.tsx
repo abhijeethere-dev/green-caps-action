@@ -193,7 +193,7 @@ const members: Member[] = [
     responsibilities: ["Health Support", "Medical Assistance", "Community Outreach"],
   },
   {
-    name: "Prabhu",
+    name: "Prabhu Mahato",
     designation: "Logistics Team",
     message: "Behind every successful event is efficient planning and seamless execution.",
     responsibilities: ["Logistics Management", "Resource Coordination", "Event Support"],
