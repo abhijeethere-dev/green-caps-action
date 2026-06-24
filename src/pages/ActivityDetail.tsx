@@ -17,6 +17,9 @@ import riverAwarenessAsset from "@/assets/river-awareness.jpg.asset.json";
 import lakeDriveAsset from "@/assets/lake-cleaning-drive.jpg.asset.json";
 import lakeWasteAsset from "@/assets/lake-waste-debris.jpg.asset.json";
 import lakeBalanceAsset from "@/assets/lake-natural-balance.jpg.asset.json";
+import treePlantingFutureAsset from "@/assets/tree-planting-future.jpg.asset.json";
+import treeBeyondPlantingAsset from "@/assets/tree-beyond-planting.jpg.asset.json";
+import treeGreenCommunitiesAsset from "@/assets/tree-green-communities.jpg.asset.json";
 
 const riverHyacinth = riverHyacinthAsset.url;
 const riverMixedGarbage = riverMixedGarbageAsset.url;
@@ -25,6 +28,9 @@ const riverAwareness = riverAwarenessAsset.url;
 const lakeDrive = lakeDriveAsset.url;
 const lakeWaste = lakeWasteAsset.url;
 const lakeBalance = lakeBalanceAsset.url;
+const treePlantingFuture = treePlantingFutureAsset.url;
+const treeBeyondPlanting = treeBeyondPlantingAsset.url;
+const treeGreenCommunities = treeGreenCommunitiesAsset.url;
 
 const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/1VqfPFzt5Zdl1Bw5ylF-XJXASoQvMVMxc4LCKzijFT3U/edit";
 
@@ -134,17 +140,17 @@ const activities: Record<string, Activity> = {
       {
         heading: "Planting for the Future",
         body: "Our plantation drives focus on planting native and sustainable species that are best suited to the local environment. Each sapling represents a long-term commitment to a greener tomorrow.",
-        images: [{ src: gallery2, alt: "Native saplings being planted" }],
+        images: [{ src: treePlantingFuture, alt: "Volunteers planting a sapling with school students" }],
       },
       {
         heading: "Beyond Planting – Nurturing Growth",
         body: "We believe planting is just the beginning. Our team ensures proper care, watering, and protection of saplings so they can grow into strong, life-giving trees.",
-        images: [{ src: gallery4, alt: "Volunteers caring for young saplings" }],
+        images: [{ src: treeBeyondPlanting, alt: "Volunteers building a protective bamboo guard around a sapling" }],
       },
       {
         heading: "Building Green Communities",
         body: "Through our plantation drives, we encourage individuals and communities to take ownership of their environment, making tree care a shared responsibility.",
-        images: [{ src: gallery1, alt: "Community plantation drive group photo" }],
+        images: [{ src: treeGreenCommunities, alt: "Community plantation drive with school students and Greencaps team" }],
       },
     ],
     closing: {
