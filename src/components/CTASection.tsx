@@ -3,7 +3,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
 const socials = [
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/greencapsfoundation?igsh=OHg3MjN5MG9nN3U1", color: "hover:text-pink-500" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/greencapsfoundation?igsh=MWltcTJvOHB6cm9lZA%3D%3D", color: "hover:text-pink-500" },
   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/share/1DdcPLMHXp/", color: "hover:text-blue-600" },
   { icon: Twitter, label: "X (Twitter)", href: "https://x.com/Greencapsjsr?s=20", color: "hover:text-foreground" },
 ];
