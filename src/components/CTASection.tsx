@@ -36,6 +36,10 @@ const CTASection = ({ onVolunteerClick }: { onVolunteerClick: () => void }) => (
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent ${s.color}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(s.href, "_blank", "noopener,noreferrer");
+                  }}
                 >
                   <s.icon className="w-5 h-5" />
                   {s.label}
