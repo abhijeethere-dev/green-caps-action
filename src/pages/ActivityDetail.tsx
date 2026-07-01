@@ -20,6 +20,9 @@ import lakeBalanceAsset from "@/assets/lake-natural-balance.jpg.asset.json";
 import treePlantingFutureAsset from "@/assets/tree-planting-future.jpg.asset.json";
 import treeBeyondPlantingAsset from "@/assets/tree-beyond-planting.jpg.asset.json";
 import treeGreenCommunitiesAsset from "@/assets/tree-green-communities.jpg.asset.json";
+import awarenessMovementAsset from "@/assets/awareness-movement.jpg.asset.json";
+import awarenessEducatingAsset from "@/assets/awareness-educating.jpg.asset.json";
+import awarenessCivicAsset from "@/assets/awareness-civic.jpg.asset.json";
 
 const riverHyacinth = riverHyacinthAsset.url;
 const riverMixedGarbage = riverMixedGarbageAsset.url;
@@ -31,6 +34,9 @@ const lakeBalance = lakeBalanceAsset.url;
 const treePlantingFuture = treePlantingFutureAsset.url;
 const treeBeyondPlanting = treeBeyondPlantingAsset.url;
 const treeGreenCommunities = treeGreenCommunitiesAsset.url;
+const awarenessMovement = awarenessMovementAsset.url;
+const awarenessEducating = awarenessEducatingAsset.url;
+const awarenessCivic = awarenessCivicAsset.url;
 
 const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/1VqfPFzt5Zdl1Bw5ylF-XJXASoQvMVMxc4LCKzijFT3U/edit";
 
@@ -168,17 +174,17 @@ const activities: Record<string, Activity> = {
       {
         heading: "Educating for Impact",
         body: "We conduct awareness campaigns in public spaces, schools, and communities to educate people about waste management, pollution, and sustainable living.",
-        images: [{ src: gallery6, alt: "Awareness session with the community" }],
+        images: [{ src: awarenessEducating, alt: "Volunteers educating the community during an awareness drive" }],
       },
       {
         heading: "Promoting Civic Responsibility",
         body: "Our message is simple — your waste is your responsibility. We encourage people to adopt habits that reduce littering and protect natural spaces.",
-        images: [{ src: gallery3, alt: "Volunteers engaging with the public" }],
+        images: [{ src: awarenessCivic, alt: "Volunteers holding civic responsibility placards on the street" }],
       },
       {
         heading: "Creating a Movement",
         body: "Through consistent efforts, we aim to build a community of aware and responsible citizens who actively contribute to a cleaner and greener world.",
-        images: [{ src: gallery5, alt: "Outreach activity in action" }],
+        images: [{ src: awarenessMovement, alt: "Group of volunteers with awareness placards at a public campaign" }],
       },
     ],
     closing: {
