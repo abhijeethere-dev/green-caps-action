@@ -11,6 +11,9 @@ import {
 } from "@/components/ui/dialog";
 import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
 import abhijeetKumar from "@/assets/abhijeet-kumar.jpg.asset.json";
+import alokSharma from "@/assets/alok-sharma.jpeg.asset.json";
+import sumantoBanerjee from "@/assets/sumanto-banerjee.jpeg.asset.json";
+import sitaGupta from "@/assets/sita-gupta.jpeg.asset.json";
 
 type Department =
   | "Mentor"
@@ -37,6 +40,7 @@ const members: Member[] = [
       "Compassion and consistent guidance can nurture a community into something extraordinary.",
     responsibilities: ["Mentorship", "Counselling Support", "Guidance & Advisory"],
     bio: "A compassionate counsellor and a nurturing soul who has been a constant source of warmth and encouragement for Greencaps Foundation.",
+    image: sitaGupta.url,
   },
   {
     name: "Gaurav Anand",
@@ -54,6 +58,7 @@ const members: Member[] = [
       "Thoughtful counsel and steady encouragement help refine our approach and keep our work grounded in purpose.",
     responsibilities: ["Strategic Advisory", "Counsel & Guidance", "Mentorship"],
     bio: "Sumanto Banerjee continues to guide Greencaps Foundation with thoughtful counsel and steady encouragement. His perspective helps us refine our approach, strengthen our intent, and keep our work grounded in purpose.",
+    image: sumantoBanerjee.url,
   },
   {
     name: "Alok Sharma",
@@ -66,6 +71,7 @@ const members: Member[] = [
       "Stakeholder Engagement",
       "Team Leadership",
     ],
+    image: alokSharma.url,
   },
   {
     name: "Prem Kumar",
