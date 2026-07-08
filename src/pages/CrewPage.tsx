@@ -168,12 +168,6 @@ const members: Member[] = [
     responsibilities: ["Volunteer Coordination", "Activity Planning", "Community Support"],
   },
   {
-    name: "Shankar Mahato",
-    designation: "Media Team",
-    message: "Stories inspire action and help communities connect with meaningful causes.",
-    responsibilities: ["Content Creation", "Photography", "Awareness Campaigns"],
-  },
-  {
     name: "Dilkush Singh",
     designation: "Media Team",
     message:
@@ -290,8 +284,8 @@ const CrewPage = () => {
   const stats = [
     { label: "Mentors", value: 3 },
     { label: "Directors", value: 3 },
-    { label: "Coordinators", value: 12 },
-    { label: "Media", value: 3 },
+    { label: "Coordinators", value: 13 },
+    { label: "Media", value: 2 },
     { label: "Medical", value: 2 },
     { label: "Logistics", value: 2 },
   ];
