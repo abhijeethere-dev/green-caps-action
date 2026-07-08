@@ -90,6 +90,12 @@ const members: Member[] = [
     ],
   },
   {
+    name: "Shankar Mahato",
+    designation: "Coordinator",
+    message: "Bringing people together is the first step toward meaningful change.",
+    responsibilities: ["Team Leadership", "Volunteer Coordination", "Event Planning"],
+  },
+  {
     name: "Ujjwal Das",
     designation: "Coordinator",
     message: "Bringing people together is the first step toward meaningful change.",
@@ -160,12 +166,6 @@ const members: Member[] = [
     designation: "Coordinator",
     message: "Impact grows through teamwork, dedication, and consistent effort.",
     responsibilities: ["Volunteer Coordination", "Activity Planning", "Community Support"],
-  },
-  {
-    name: "Shankar Mahato",
-    designation: "Media Team",
-    message: "Stories inspire action and help communities connect with meaningful causes.",
-    responsibilities: ["Content Creation", "Photography", "Awareness Campaigns"],
   },
   {
     name: "Dilkush Singh",
@@ -284,8 +284,8 @@ const CrewPage = () => {
   const stats = [
     { label: "Mentors", value: 3 },
     { label: "Directors", value: 3 },
-    { label: "Coordinators", value: 12 },
-    { label: "Media", value: 3 },
+    { label: "Coordinators", value: 13 },
+    { label: "Media", value: 2 },
     { label: "Medical", value: 2 },
     { label: "Logistics", value: 2 },
   ];
