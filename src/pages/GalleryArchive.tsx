@@ -7,15 +7,30 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import mar2026 from "@/assets/gallery-2026-03.jpg.asset.json";
+import apr2026 from "@/assets/gallery-2026-04.jpg.asset.json";
+import may2026 from "@/assets/gallery-2026-05.jpg.asset.json";
+import jun2026 from "@/assets/gallery-2026-06.jpg.asset.json";
+import jul2026 from "@/assets/gallery-2026-07.jpg.asset.json";
 
 const YEARS = [2021, 2022, 2023, 2024, 2025, 2026];
-const MONTHS_BY_YEAR: Record<number, number> = { 2026: 5 };
+const MONTHS_BY_YEAR: Record<number, number> = { 2026: 7 };
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
 ];
 
 const COVERS = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
+
+const IMAGES_BY_YEAR_MONTH: Record<number, Record<number, string>> = {
+  2026: {
+    3: mar2026.url,
+    4: apr2026.url,
+    5: may2026.url,
+    6: jun2026.url,
+    7: jul2026.url,
+  },
+};
 
 const GalleryArchive = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
@@ -87,7 +102,7 @@ const GalleryArchive = () => {
               >
                 <div className="relative overflow-hidden rounded-xl aspect-square bg-muted shadow-sm group-hover:shadow-lg transition-all group-hover:-translate-y-1">
                   <img
-                    src={COVERS[i % COVERS.length]}
+                    src={IMAGES_BY_YEAR_MONTH[selectedYear]?.[i + 1] ?? COVERS[i % COVERS.length]}
                     alt={`${month} ${selectedYear}`}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
