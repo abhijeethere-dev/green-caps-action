@@ -90,6 +90,12 @@ const members: Member[] = [
     ],
   },
   {
+    name: "Shankar Mahato",
+    designation: "Coordinator",
+    message: "Bringing people together is the first step toward meaningful change.",
+    responsibilities: ["Team Leadership", "Volunteer Coordination", "Event Planning"],
+  },
+  {
     name: "Ujjwal Das",
     designation: "Coordinator",
     message: "Bringing people together is the first step toward meaningful change.",
