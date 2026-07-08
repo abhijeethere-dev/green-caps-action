@@ -10,6 +10,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
+import abhijeetKumar from "@/assets/abhijeet-kumar.jpg.asset.json";
 
 type Department =
   | "Mentor"
@@ -88,6 +89,7 @@ const members: Member[] = [
       "Volunteer Engagement",
       "Project Execution",
     ],
+    image: abhijeetKumar.url,
   },
   {
     name: "Shankar Mahato",
