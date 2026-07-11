@@ -7,11 +7,11 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
-import mar2026 from "@/assets/gallery-2026-03.jpg.asset.json";
-import apr2026 from "@/assets/gallery-2026-04.jpg.asset.json";
-import may2026 from "@/assets/gallery-2026-05.jpg.asset.json";
-import jun2026 from "@/assets/gallery-2026-06.jpg.asset.json";
-import jul2026 from "@/assets/gallery-2026-07.jpg.asset.json";
+const mar2026 = { url: "/images/gallery-2026-03.jpg" };
+const apr2026 = { url: "/images/gallery-2026-04.jpg" };
+const may2026 = { url: "/images/gallery-2026-05.jpg" };
+const jun2026 = { url: "/images/gallery-2026-06.jpg" };
+const jul2026 = { url: "/images/gallery-2026-07.jpg" };
 
 const YEARS = [2021, 2022, 2023, 2024, 2025, 2026];
 const MONTHS_BY_YEAR: Record<number, number> = { 2026: 7 };

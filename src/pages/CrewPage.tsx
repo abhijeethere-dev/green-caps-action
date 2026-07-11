@@ -9,11 +9,11 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
-import abhijeetKumar from "@/assets/abhijeet-kumar.jpg.asset.json";
-import alokSharma from "@/assets/alok-sharma.jpeg.asset.json";
-import sumantoBanerjee from "@/assets/sumanto-banerjee.jpeg.asset.json";
-import sitaGupta from "@/assets/sita-gupta.jpeg.asset.json";
+const gauravHeadshot = { url: "/images/gaurav-anand-headshot.jpg" };
+const abhijeetKumar = { url: "/images/abhijeet-kumar.jpg" };
+const alokSharma = { url: "/images/alok-sharma.jpeg" };
+const sumantoBanerjee = { url: "/images/sumanto-banerjee.jpeg" };
+const sitaGupta = { url: "/images/sita-gupta.jpeg" };
 
 type Department =
   | "Mentor"

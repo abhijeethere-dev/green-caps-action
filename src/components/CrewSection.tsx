@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import gauravHeadshot from "@/assets/gaurav-anand-headshot.jpg.asset.json";
+const gauravHeadshot = { url: "/images/gaurav-anand-headshot.jpg" };
 
 type Mentor = {
   name: string;
