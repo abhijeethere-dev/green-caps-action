@@ -465,6 +465,15 @@ const CrewPage = () => {
                 </p>
               </div>
 
+              {active.bio && (
+                <div className="mt-6">
+                  <h4 className="text-sm font-semibold mb-2">About</h4>
+                  <p className="text-sm text-foreground/80 leading-relaxed whitespace-pre-line">
+                    {active.bio}
+                  </p>
+                </div>
+              )}
+
               <div className="mt-6">
                 <h4 className="text-sm font-semibold mb-3">Responsibilities</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
