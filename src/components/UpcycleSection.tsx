@@ -1,7 +1,7 @@
 import { Recycle } from "lucide-react";
-import planterAsset from "@/assets/upcycle-planter.jpeg.asset.json";
-import functionalAsset from "@/assets/upcycle-functional.jpeg.asset.json";
-import awarenessAsset from "@/assets/upcycle-awareness.jpeg.asset.json";
+const planterAsset = { url: "/images/upcycle-planter.jpeg" };
+const functionalAsset = { url: "/images/upcycle-functional.jpeg" };
+const awarenessAsset = { url: "/images/upcycle-awareness.jpeg" };
 
 const items = [
   {

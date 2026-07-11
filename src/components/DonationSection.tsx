@@ -1,6 +1,6 @@
 import { Shirt, Utensils } from "lucide-react";
-import donationImg from "@/assets/clothes-donation.jpg.asset.json";
-import foodImg from "@/assets/food-distribution.jpg.asset.json";
+const donationImg = { url: "/images/clothes-donation.jpg" };
+const foodImg = { url: "/images/food-distribution.jpg" };
 
 const items = [
   {
